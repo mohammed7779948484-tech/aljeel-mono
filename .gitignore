@@ -1,6 +1,10 @@
 # Root monorepo gitignore
 
-# Frappe/Python
+# Windows metadata (NTFS alternate data streams)
+*:Zone.Identifier
+*Zone.Identifier
+
+
 __pycache__/
 *.py[cod]
 *.pyc
@@ -27,9 +31,6 @@ desktop.ini
 # Logs
 *.log
 logs/
-
-# Antigravity AI (IDE assistant files — do not commit)
-.agents/
 
 # Environment files
 .env
