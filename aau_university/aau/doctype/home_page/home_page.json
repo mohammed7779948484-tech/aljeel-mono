@@ -1,0 +1,524 @@
+{
+ "actions": [],
+ "creation": "2026-04-02 19:01:40.687937",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_hero",
+  "hero_badge_ar",
+  "hero_badge_en",
+  "hero_title_primary_ar",
+  "hero_title_primary_en",
+  "hero_column_break",
+  "hero_title_secondary_ar",
+  "hero_title_secondary_en",
+  "hero_description_ar",
+  "hero_description_en",
+  "hero_image",
+  "hero_background_type",
+  "hero_background_image",
+  "hero_background_video",
+  "hero_background_overlay_opacity",
+  "section_statistics",
+  "students_count",
+  "stats_counts_column_break",
+  "faculty_count",
+  "programs_count",
+  "colleges_count",
+  "section_stats_labels",
+  "stats_students_label_ar",
+  "stats_students_label_en",
+  "stats_labels_column_break",
+  "stats_faculty_label_ar",
+  "stats_faculty_label_en",
+  "stats_programs_label_ar",
+  "stats_programs_label_en",
+  "stats_colleges_label_ar",
+  "stats_colleges_label_en",
+  "section_campus_life",
+  "campus_life_title_ar",
+  "campus_life_title_en",
+  "campus_life_description_ar",
+  "campus_life_description_en",
+  "section_projects",
+  "projects_title_ar",
+  "projects_title_en",
+  "projects_description_ar",
+  "projects_description_en",
+  "section_colleges",
+  "colleges_title_ar",
+  "colleges_title_en",
+  "colleges_description_ar",
+  "colleges_description_en",
+  "section_news",
+  "news_title_ar",
+  "news_title_en",
+  "news_description_ar",
+  "news_description_en",
+  "section_events",
+  "events_title_ar",
+  "events_title_en",
+  "events_description_ar",
+  "events_description_en",
+  "section_faq",
+  "faq_title_ar",
+  "faq_title_en",
+  "faq_description_ar",
+  "faq_description_en",
+  "section_video",
+  "video_title_ar",
+  "video_title_en",
+  "video_description_ar",
+  "video_description_en",
+  "video_file",
+  "video_overlay_column_break",
+  "video_overlay_title_ar",
+  "video_overlay_title_en",
+  "video_overlay_description_ar",
+  "video_overlay_description_en",
+  "section_contact",
+  "contact_title_ar",
+  "contact_title_en",
+  "contact_description_ar",
+  "contact_description_en"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_hero",
+   "fieldtype": "Section Break",
+   "label": "\u0642\u0633\u0645 \u0627\u0644\u0647\u064a\u0631\u0648"
+  },
+  {
+   "fieldname": "hero_badge_ar",
+   "fieldtype": "Data",
+   "label": "\u0634\u0627\u0631\u0629 \u0627\u0644\u0647\u064a\u0631\u0648"
+  },
+  {
+   "fieldname": "hero_badge_en",
+   "fieldtype": "Data",
+   "label": "Hero Badge (EN)"
+  },
+  {
+   "fieldname": "hero_title_primary_ar",
+   "fieldtype": "Data",
+   "label": "\u0627\u0644\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u0631\u0626\u064a\u0633\u064a"
+  },
+  {
+   "fieldname": "hero_title_primary_en",
+   "fieldtype": "Data",
+   "label": "Primary Title (EN)"
+  },
+  {
+   "fieldname": "hero_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hero_title_secondary_ar",
+   "fieldtype": "Data",
+   "label": "\u0627\u0644\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u062b\u0627\u0646\u0648\u064a"
+  },
+  {
+   "fieldname": "hero_title_secondary_en",
+   "fieldtype": "Data",
+   "label": "Secondary Title (EN)"
+  },
+  {
+   "fieldname": "hero_description_ar",
+   "fieldtype": "Small Text",
+   "label": "\u0648\u0635\u0641 \u0627\u0644\u0647\u064a\u0631\u0648"
+  },
+  {
+   "fieldname": "hero_description_en",
+   "fieldtype": "Small Text",
+   "label": "Hero Description (EN)"
+  },
+  {
+   "fieldname": "hero_image",
+   "fieldtype": "Attach Image",
+   "label": "\u0635\u0648\u0631\u0629 \u0627\u0644\u0647\u064a\u0631\u0648"
+  },
+  {
+   "default": "none",
+   "fieldname": "hero_background_type",
+   "fieldtype": "Select",
+   "label": "\u0646\u0648\u0639 \u062e\u0644\u0641\u064a\u0629 \u0627\u0644\u0647\u064a\u0631\u0648",
+   "options": "none\nimage\nvideo"
+  },
+  {
+   "depends_on": "eval:doc.hero_background_type=='image'",
+   "fieldname": "hero_background_image",
+   "fieldtype": "Attach Image",
+   "label": "\u0635\u0648\u0631\u0629 \u062e\u0644\u0641\u064a\u0629 \u0627\u0644\u0647\u064a\u0631\u0648"
+  },
+  {
+   "depends_on": "eval:doc.hero_background_type=='video'",
+   "fieldname": "hero_background_video",
+   "fieldtype": "Attach",
+   "label": "\u0641\u064a\u062f\u064a\u0648 \u062e\u0644\u0641\u064a\u0629 \u0627\u0644\u0647\u064a\u0631\u0648"
+  },
+  {
+   "default": "0.45",
+   "fieldname": "hero_background_overlay_opacity",
+   "fieldtype": "Float",
+   "label": "\u0634\u0641\u0627\u0641\u064a\u0629 \u0637\u0628\u0642\u0629 \u062e\u0644\u0641\u064a\u0629 \u0627\u0644\u0647\u064a\u0631\u0648"
+  },
+  {
+   "fieldname": "section_statistics",
+   "fieldtype": "Section Break",
+   "label": "\u0642\u0633\u0645 \u0627\u0644\u0625\u062d\u0635\u0627\u0626\u064a\u0627\u062a"
+  },
+  {
+   "fieldname": "students_count",
+   "fieldtype": "Int",
+   "label": "\u0639\u062f\u062f \u0627\u0644\u0637\u0644\u0627\u0628"
+  },
+  {
+   "fieldname": "stats_counts_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "faculty_count",
+   "fieldtype": "Int",
+   "label": "\u0639\u062f\u062f \u0623\u0639\u0636\u0627\u0621 \u0647\u064a\u0626\u0629 \u0627\u0644\u062a\u062f\u0631\u064a\u0633"
+  },
+  {
+   "fieldname": "programs_count",
+   "fieldtype": "Int",
+   "label": "\u0639\u062f\u062f \u0627\u0644\u0628\u0631\u0627\u0645\u062c"
+  },
+  {
+   "fieldname": "colleges_count",
+   "fieldtype": "Int",
+   "label": "\u0639\u062f\u062f \u0627\u0644\u0643\u0644\u064a\u0627\u062a"
+  },
+  {
+   "fieldname": "section_stats_labels",
+   "fieldtype": "Section Break",
+   "label": "\u062a\u0633\u0645\u064a\u0627\u062a \u0627\u0644\u0625\u062d\u0635\u0627\u0626\u064a\u0627\u062a"
+  },
+  {
+   "fieldname": "stats_students_label_ar",
+   "fieldtype": "Data",
+   "label": "\u062a\u0633\u0645\u064a\u0629 \u0627\u0644\u0637\u0644\u0627\u0628"
+  },
+  {
+   "fieldname": "stats_students_label_en",
+   "fieldtype": "Data",
+   "label": "Students Label (EN)"
+  },
+  {
+   "fieldname": "stats_labels_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "stats_faculty_label_ar",
+   "fieldtype": "Data",
+   "label": "\u062a\u0633\u0645\u064a\u0629 \u0647\u064a\u0626\u0629 \u0627\u0644\u062a\u062f\u0631\u064a\u0633"
+  },
+  {
+   "fieldname": "stats_faculty_label_en",
+   "fieldtype": "Data",
+   "label": "Faculty Label (EN)"
+  },
+  {
+   "fieldname": "stats_programs_label_ar",
+   "fieldtype": "Data",
+   "label": "\u062a\u0633\u0645\u064a\u0629 \u0627\u0644\u0628\u0631\u0627\u0645\u062c"
+  },
+  {
+   "fieldname": "stats_programs_label_en",
+   "fieldtype": "Data",
+   "label": "Programs Label (EN)"
+  },
+  {
+   "fieldname": "stats_colleges_label_ar",
+   "fieldtype": "Data",
+   "label": "\u062a\u0633\u0645\u064a\u0629 \u0627\u0644\u0643\u0644\u064a\u0627\u062a"
+  },
+  {
+   "fieldname": "stats_colleges_label_en",
+   "fieldtype": "Data",
+   "label": "Colleges Label (EN)"
+  },
+  {
+   "fieldname": "section_campus_life",
+   "fieldtype": "Section Break",
+   "label": "\u0642\u0633\u0645 \u0627\u0644\u062d\u064a\u0627\u0629 \u0627\u0644\u062c\u0627\u0645\u0639\u064a\u0629"
+  },
+  {
+   "fieldname": "campus_life_title_ar",
+   "fieldtype": "Data",
+   "label": "\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u062d\u064a\u0627\u0629 \u0627\u0644\u062c\u0627\u0645\u0639\u064a\u0629"
+  },
+  {
+   "fieldname": "campus_life_title_en",
+   "fieldtype": "Data",
+   "label": "Campus Life Title (EN)"
+  },
+  {
+   "fieldname": "campus_life_description_ar",
+   "fieldtype": "Small Text",
+   "label": "\u0648\u0635\u0641 \u0627\u0644\u062d\u064a\u0627\u0629 \u0627\u0644\u062c\u0627\u0645\u0639\u064a\u0629"
+  },
+  {
+   "fieldname": "campus_life_description_en",
+   "fieldtype": "Small Text",
+   "label": "Campus Life Description (EN)"
+  },
+  {
+   "fieldname": "section_projects",
+   "fieldtype": "Section Break",
+   "label": "\u0642\u0633\u0645 \u0627\u0644\u0645\u0634\u0627\u0631\u064a\u0639"
+  },
+  {
+   "fieldname": "projects_title_ar",
+   "fieldtype": "Data",
+   "label": "\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u0645\u0634\u0627\u0631\u064a\u0639"
+  },
+  {
+   "fieldname": "projects_title_en",
+   "fieldtype": "Data",
+   "label": "Projects Title (EN)"
+  },
+  {
+   "fieldname": "projects_description_ar",
+   "fieldtype": "Small Text",
+   "label": "\u0648\u0635\u0641 \u0627\u0644\u0645\u0634\u0627\u0631\u064a\u0639"
+  },
+  {
+   "fieldname": "projects_description_en",
+   "fieldtype": "Small Text",
+   "label": "Projects Description (EN)"
+  },
+  {
+   "fieldname": "section_colleges",
+   "fieldtype": "Section Break",
+   "label": "\u0642\u0633\u0645 \u0627\u0644\u0643\u0644\u064a\u0627\u062a"
+  },
+  {
+   "fieldname": "colleges_title_ar",
+   "fieldtype": "Data",
+   "label": "\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u0643\u0644\u064a\u0627\u062a"
+  },
+  {
+   "fieldname": "colleges_title_en",
+   "fieldtype": "Data",
+   "label": "Colleges Title (EN)"
+  },
+  {
+   "fieldname": "colleges_description_ar",
+   "fieldtype": "Small Text",
+   "label": "\u0648\u0635\u0641 \u0627\u0644\u0643\u0644\u064a\u0627\u062a"
+  },
+  {
+   "fieldname": "colleges_description_en",
+   "fieldtype": "Small Text",
+   "label": "Colleges Description (EN)"
+  },
+  {
+   "fieldname": "section_news",
+   "fieldtype": "Section Break",
+   "label": "\u0642\u0633\u0645 \u0627\u0644\u0623\u062e\u0628\u0627\u0631"
+  },
+  {
+   "fieldname": "news_title_ar",
+   "fieldtype": "Data",
+   "label": "\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u0623\u062e\u0628\u0627\u0631"
+  },
+  {
+   "fieldname": "news_title_en",
+   "fieldtype": "Data",
+   "label": "News Title (EN)"
+  },
+  {
+   "fieldname": "news_description_ar",
+   "fieldtype": "Small Text",
+   "label": "\u0648\u0635\u0641 \u0627\u0644\u0623\u062e\u0628\u0627\u0631"
+  },
+  {
+   "fieldname": "news_description_en",
+   "fieldtype": "Small Text",
+   "label": "News Description (EN)"
+  },
+  {
+   "fieldname": "section_events",
+   "fieldtype": "Section Break",
+   "label": "\u0642\u0633\u0645 \u0627\u0644\u0641\u0639\u0627\u0644\u064a\u0627\u062a"
+  },
+  {
+   "fieldname": "events_title_ar",
+   "fieldtype": "Data",
+   "label": "\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u0641\u0639\u0627\u0644\u064a\u0627\u062a"
+  },
+  {
+   "fieldname": "events_title_en",
+   "fieldtype": "Data",
+   "label": "Events Title (EN)"
+  },
+  {
+   "fieldname": "events_description_ar",
+   "fieldtype": "Small Text",
+   "label": "\u0648\u0635\u0641 \u0627\u0644\u0641\u0639\u0627\u0644\u064a\u0627\u062a"
+  },
+  {
+   "fieldname": "events_description_en",
+   "fieldtype": "Small Text",
+   "label": "Events Description (EN)"
+  },
+  {
+   "fieldname": "section_faq",
+   "fieldtype": "Section Break",
+   "label": "\u0642\u0633\u0645 \u0627\u0644\u0623\u0633\u0626\u0644\u0629 \u0627\u0644\u0645\u062a\u0643\u0631\u0631\u0629"
+  },
+  {
+   "fieldname": "faq_title_ar",
+   "fieldtype": "Data",
+   "label": "\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u0623\u0633\u0626\u0644\u0629 \u0627\u0644\u0645\u062a\u0643\u0631\u0631\u0629"
+  },
+  {
+   "fieldname": "faq_title_en",
+   "fieldtype": "Data",
+   "label": "FAQ Title (EN)"
+  },
+  {
+   "fieldname": "faq_description_ar",
+   "fieldtype": "Small Text",
+   "label": "\u0648\u0635\u0641 \u0627\u0644\u0623\u0633\u0626\u0644\u0629 \u0627\u0644\u0645\u062a\u0643\u0631\u0631\u0629"
+  },
+  {
+   "fieldname": "faq_description_en",
+   "fieldtype": "Small Text",
+   "label": "FAQ Description (EN)"
+  },
+  {
+   "fieldname": "section_video",
+   "fieldtype": "Section Break",
+   "label": "\u0642\u0633\u0645 \u0627\u0644\u0641\u064a\u062f\u064a\u0648"
+  },
+  {
+   "fieldname": "video_title_ar",
+   "fieldtype": "Data",
+   "label": "\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u0641\u064a\u062f\u064a\u0648"
+  },
+  {
+   "fieldname": "video_title_en",
+   "fieldtype": "Data",
+   "label": "Video Title (EN)"
+  },
+  {
+   "fieldname": "video_description_ar",
+   "fieldtype": "Small Text",
+   "label": "\u0648\u0635\u0641 \u0627\u0644\u0641\u064a\u062f\u064a\u0648"
+  },
+  {
+   "fieldname": "video_description_en",
+   "fieldtype": "Small Text",
+   "label": "Video Description (EN)"
+  },
+  {
+   "description": "\u0645\u0644\u0641 \u0641\u064a\u062f\u064a\u0648 \u0645\u0631\u0641\u0648\u0639 \u0645\u0646 \u0645\u0644\u0641\u0627\u062a Frappe",
+   "fieldname": "video_file",
+   "fieldtype": "Attach",
+   "label": "\u0645\u0644\u0641 \u0627\u0644\u0641\u064a\u062f\u064a\u0648"
+  },
+  {
+   "fieldname": "video_overlay_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "video_overlay_title_ar",
+   "fieldtype": "Data",
+   "label": "\u0639\u0646\u0648\u0627\u0646 \u0637\u0628\u0642\u0629 \u0627\u0644\u0641\u064a\u062f\u064a\u0648"
+  },
+  {
+   "fieldname": "video_overlay_title_en",
+   "fieldtype": "Data",
+   "label": "Video Overlay Title (EN)"
+  },
+  {
+   "fieldname": "video_overlay_description_ar",
+   "fieldtype": "Small Text",
+   "label": "\u0648\u0635\u0641 \u0637\u0628\u0642\u0629 \u0627\u0644\u0641\u064a\u062f\u064a\u0648"
+  },
+  {
+   "fieldname": "video_overlay_description_en",
+   "fieldtype": "Small Text",
+   "label": "Video Overlay Description (EN)"
+  },
+  {
+   "fieldname": "section_contact",
+   "fieldtype": "Section Break",
+   "label": "\u0642\u0633\u0645 \u0627\u0644\u062a\u0648\u0627\u0635\u0644"
+  },
+  {
+   "fieldname": "contact_title_ar",
+   "fieldtype": "Data",
+   "label": "\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u062a\u0648\u0627\u0635\u0644"
+  },
+  {
+   "fieldname": "contact_title_en",
+   "fieldtype": "Data",
+   "label": "Contact Title (EN)"
+  },
+  {
+   "fieldname": "contact_description_ar",
+   "fieldtype": "Small Text",
+   "label": "\u0648\u0635\u0641 \u0627\u0644\u062a\u0648\u0627\u0635\u0644"
+  },
+  {
+   "fieldname": "contact_description_en",
+   "fieldtype": "Small Text",
+   "label": "Contact Description (EN)"
+  }
+ ],
+ "grid_page_length": 50,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-04-08 09:20:17.440773",
+ "modified_by": "Administrator",
+ "module": "AAU",
+ "name": "Home Page",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "AAU Content Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "AAU Site Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "print": 1,
+   "read": 1,
+   "role": "AAU Editor"
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

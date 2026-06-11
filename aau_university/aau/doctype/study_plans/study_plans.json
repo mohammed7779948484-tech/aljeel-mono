@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-15 21:09:33.508587",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "main_section",
+  "plan_name",
+  "plan_name_en",
+  "academic_program",
+  "total_credits",
+  "description",
+  "description_en",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "fieldname": "main_section",
+   "fieldtype": "Section Break",
+   "label": "Main Section"
+  },
+  {
+   "description": "اسم الخطة",
+   "fieldname": "plan_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Plan Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plan_name_en",
+   "fieldtype": "Data",
+   "insert_after": "plan_name",
+   "label": "Plan Name (English)"
+  },
+  {
+   "description": "البرنامج الأكاديمي",
+   "fieldname": "academic_program",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Academic Program",
+   "options": "Academic Programs",
+   "reqd": 1
+  },
+  {
+   "description": "مجموع الساعات",
+   "fieldname": "total_credits",
+   "fieldtype": "Int",
+   "label": "Total Credits"
+  },
+  {
+   "description": "وصف الخطة",
+   "fieldname": "description",
+   "fieldtype": "Long Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "description_en",
+   "fieldtype": "Long Text",
+   "insert_after": "description",
+   "label": "Description (English)"
+  },
+  {
+   "default": "0",
+   "description": "مفعل",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-02 00:40:59.571076",
+ "modified_by": "Administrator",
+ "module": "AAU",
+ "name": "Study Plans",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

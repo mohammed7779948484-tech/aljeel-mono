@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-10 22:20:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_announcement",
+  "title",
+  "title_en",
+  "publish_date",
+  "content",
+  "content_en",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_announcement",
+   "fieldtype": "Section Break",
+   "label": "بيانات الإعلان"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "عنوان الإعلان",
+   "reqd": 1
+  },
+  {
+   "fieldname": "title_en",
+   "fieldtype": "Data",
+   "insert_after": "title",
+   "label": "عنوان الإعلان (English)"
+  },
+  {
+   "fieldname": "publish_date",
+   "fieldtype": "Date",
+   "label": "تاريخ النشر"
+  },
+  {
+   "fieldname": "content",
+   "fieldtype": "Long Text",
+   "label": "محتوى الإعلان"
+  },
+  {
+   "fieldname": "content_en",
+   "fieldtype": "Long Text",
+   "insert_after": "content",
+   "label": "محتوى الإعلان (English)"
+  },
+  {
+   "default": "0",
+   "description": "تحديد ما إذا كان الإعلان ظاهرًا في الموقع",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "مفعل"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-15 15:23:38.814473",
+ "modified_by": "Administrator",
+ "module": "AAU",
+ "name": "Announcement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "AAU Content Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
