@@ -1,4 +1,4 @@
-﻿import type { KbSourceRef } from '@/types/kb';
+import type { KbSourceRef } from '@/types/kb';
 export { loadKbIndex } from '@/lib/kb-store'
 
 export function toSourceRef(
